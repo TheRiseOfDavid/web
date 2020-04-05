@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+        }
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 5.1cm;
+            height: 8.2cm;
+            padding: 0.1cm;
+            border-color: gray;
+            border-width: 0.15cm;
+            border-style: solid;
+            border-radius: 0.25cm;
+            margin: 0.4cm;
+        }
+
+        .card-fill {
+            display: inline-block;
+            width: 6.4cm;
+            height: 0cm;
+        }
+
+        .card-name {
+            font-size: 0.4cm;
+            text-align: left;
+            line-height: 0.5cm;
+            width: 4.6cm;
+            height: 0.5cm;
+            padding: 0.09cm;
+            border-color: gray;
+            border-width: 0.01cm;
+            border-style: solid;
+            margin: 0.15cm 0.15cm 0.05cm;
+        }
+
+        .card-type {
+            font-size: 0.3cm;
+            text-align: right;
+            line-height: 0.4cm;
+            width: 4.8cm;
+            height: 0.4cm;
+            padding: 0.05cm 0cm;
+            margin: 0.05cm 0.15cm;
+        }
+
+        .card-image {
+            width: 4.78cm;
+            height: 4.18cm;
+            border-color: gray;
+            border-width: 0.01cm;
+            border-style: solid;
+            margin: 0.05cm 0.15cm;
+        }
+
+        .card-description {
+            font-size: 0.25cm;
+            text-align: left;
+            line-height: 0.35cm;
+            width: 4.6cm;
+            height: 2cm;
+            padding: 0.09cm;
+            border-color: gray;
+            border-width: 0.01cm;
+            border-style: solid;
+            margin: 0.25cm 0.15cm;
+        }
+
+        .card-parameters {
+            width: 4.78cm;
+            height: 0.948cm;
+            border-color: gray;
+            border-width: 0.01cm;
+            border-style: solid;
+            margin-top: -3.66cm;
+            margin-left: 0.15cm;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .card-parameter {
+            font-size: 0.35cm;
+            line-height: 0.948cm;
+            text-align: center;
+            width: 0.948cm;
+            height: 0.948cm;
+            float: left;
+        }
+
+        .card-parameter+.card-parameter {
+            border-left-color: gray;
+            border-left-width: 0.01cm;
+            border-left-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-name">名稱</div>
+        <div class="card-type">類型</div>
+        <div class="card-image" style="
+            background-size: cover;
+            background-position: center;
+            background-image: url(https://i.imgur.com/xEnQBkF.jpg)"
+        ></div>
+        <div class="card-description">描述描述描述描述描述描述描述描述描述描述</div>
+        <div class="card-parameters">
+            <div class="card-parameter">1</div>
+            <div class="card-parameter">10</div>
+            <div class="card-parameter">100</div>
+            <div class="card-parameter">1000</div>
+            <div class="card-parameter">10000</div>
+        </div>
+    </div>
+    <!-- <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div>
+    <div class="card-fill"></div> -->
+</body>
+
+</html>

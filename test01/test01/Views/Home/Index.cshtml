@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var student = ViewBag.Student;
+    var list = ViewBag.List;
+    var date = ViewBag.Date;
+    var success = ViewBag.success;
+    var dt = ViewBag.dt;
+}
+
+@model test01.Models.Student
+
+<form style="margin-left:10px;" method="post" action="/Home/transcripts">
+    <div class="form-group">
+        <label for="exampleInputEmail1">學號</label>
+        <input type="text" class="form-control" id="id" name="id" aria-describedby="emailHelp" placeholder="Enter email" value="@Model.id">
+        <small id="emailHelp" class="form-text text-muted">請輸入數字</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">姓名</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Password" value="@Model.name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">分數</label>
+        <input type="text" class="form-control" id="score" name="score" aria-describedby="emailHelp" placeholder="Enter email" value="@Model.score">
+    </div>
+    <button type="submit" class="btn btn-primary">確定</button>
+    <div>@success</div>
+</form>
+
+<br />
+<br />
+
+<div>
+    @for(int i = 0; i < dt.Rows.Count; i++) {
+        @Html.Raw($"代號: {dt.Rows[i]["id"]}, 名稱: {dt.Rows[i]["city"]}")
+        <br />
+        }
+</div>
