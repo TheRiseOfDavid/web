@@ -7,22 +7,74 @@
         .card-board,
         .card-board *{
             border: #000  0.5px solid;
+
         }
         
-        .card-board{
-            display: flex;
-            flex-wrap: nowrap;
+        .card-board *{
+            float: left;
+            box-sizing: border-box;
         }
 
+        .card-board{
+
+            --card-grid-width: 170px;
+            --card-grid-height: 145px;
+            --card-split-line-height: calc(var(--card-grid-height) / 2);
+
+            width: calc(var(--card-grid-width)*5);
+            height: calc(var(--card-grid-height)* 4 + var(--card-split-line-height));
+            margin: 0 auto;
 
 
+
+            transform: perspective(700px) rotateX(45deg);
+        }
+
+        .card-grid{
+            
+            width: var(--card-grid-width);
+            height: var(--card-grid-height);
+
+        }
+
+        .card-grid-split-line{
+           
+            width: 100%;
+            height: var(--card-grid-height);
+        }
 
     </style>
 </head>
 
 <body>
     <div class="card-board">
-        
+
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+
+        <div class="card-grid-split-line"></div>
+
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+
     </div>
 </body>
 
