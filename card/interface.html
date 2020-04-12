@@ -4,77 +4,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>interface</title>
     <style>
-        .card-board,
-        .card-board *{
-            border: #000  0.5px solid;
-
+        html,body,
+        .container{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            --card-explain-container-width: 500px;
+            --card-width: calc(59px*2) ;
+            --card-height: calc(86px * 2);
+            --card-grid: calc(128px * 1.2);
         }
         
-        .card-board *{
+        body{
+            overflow: hidden;
+        }
+
+        .container>*{
             float: left;
+        }
+
+        .card-explain-container{
+            width: var(--card-explain-container-width);
+            height: 100%;
             box-sizing: border-box;
+            border-right: #000 solid 1px;
+            background-color: lightpink;
+        }
+
+        .card-board-container{
+            background-image: url("kk.jpg");
+            background-size: cover;
+            width: calc(100% - var(--card-explain-container-width));
+            height: 100%;
         }
 
         .card-board{
                 
-            --card-grid-width: 170px;
-            --card-grid-height: 145px;
-            --card-split-line-height: calc(var(--card-grid-height) / 2);
+                --card-split-line-height: calc(var(--card-grid) / 2);
+    
+                width: calc(var(--card-grid)*5);
+                height: calc(var(--card-grid)* 4 + var(--card-grid));
+                margin: 0 auto;
+    
+                transform: perspective(900px) rotateX(40deg);
+            }
 
-            width: calc(var(--card-grid-width)*5);
-            height: calc(var(--card-grid-height)* 4 + var(--card-grid-height));
-            margin: 0 auto;
-
-
-
-            transform: perspective(900px) rotateX(45deg);
+        .card-board,
+        .card-board *{
+            border: #fff  0.5px solid;
+        }
+        
+        .card-board *{  
+            float: left;
+            box-sizing: border-box;
         }
 
-        .card-grid{
-            
-            width: var(--card-grid-width);
-            height: var(--card-grid-height);
+
+
+        .card-grid{      
+            width: var(--card-grid);
+            height: var(--card-grid);
 
         }
 
         .card-grid-split-line{
-           
             width: 100%;
-            height: var(--card-grid-height);
+            height: var(--card-grid);
         }
+
+        .card-picture{
+            width: calc(var(--card-width) * 2);
+            height: calc(var(--card-height) * 2);
+            padding: 8px;
+            background-image: url(tt.jpg);
+            background-size: cover;
+            margin: 20px auto ;
+        }
+
+        .card-explain-grid{
+            width: 500px ;
+            height: 100%;
+            border-top: #000 0.5px solid
+        }
+
+        .card-explain-title{
+            width: 80%;
+            height: 30px;
+            border: dimgray 2px solid ;
+            border-right: white 1px solid;
+            border-bottom: white 1px solid;
+            margin: 20px auto;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 30px;
+            font-family: Microsoft JhengHei;
+        }
+
+        .card-explain-text{
+            width: 80%;
+            height: 100%;
+            text-align: left;
+            margin: auto auto ;
+            font-family: Microsoft JhengHei;
+            color:black
+            
+        }
+
 
     </style>
 </head>
 
-<body>
-    <div class="card-board">
+<body >
+    <div class="container">
+        <div class="card-explain-container">
+            <div class="card-picture"></div>
+            <div class="card-explain-grid">
+                <div class="card-explain-title">
+                    何玉婷 - 大衛的女朋友
+                </div>
+                <div class="card-explain-text">
+                    <p>欺負大衛 - 只要大衛想要揉胸，一律不准、摸摸下面或解胸罩也不行。</p>
+                    <p>極其敷衍 - 只要遇到不想回答的問題就「呵呵」。</p>
+                    <p>很愛大衛 - 雖然大衛很幼稚，不像男朋友。但還是很喜歡(我也很愛妳拉)</p>
+                    <p>有凱沒衛 - 有凱凱在旁邊，就不會有大衛。(小孩大於我 QQ)</p>
+                    <p>大衛標記 - 大衛以後會內射婷婷，讓婷婷完全都是大衛的人。</p>
+                </div>
+            </div>
+        </div> 
 
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
+        <div class="card-board-container">
+            
+        
+            <div class="card-board">
 
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
 
-        <div class="card-grid-split-line"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
 
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
+                <div class="card-grid-split-line"></div>
 
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
-        <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
 
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+                <div class="card-grid"></div>
+
+            </div>
+        </div>
     </div>
 </body>
 
