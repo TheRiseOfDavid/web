@@ -1,0 +1,143 @@
+$card_explain_container_width: 30%;
+$card_width: 59px *2.5;
+$card_height: 86px *2.5 ;
+$card_grid: 128px * 1.2;
+$card_explain_grid: #000000 0.5px solid;
+$card_split_line_height: $card_grid /2 ;
+$perspective_card_board: 900px;
+$rotateX_card_board: 40deg;
+$card_board_grid: #ffffff 0.5px solid;
+
+body{
+    overflow: hidden;
+    margin : 0 0;
+    .container{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.card_explain_container{
+    width: $card_explain_container_width;
+    height: 100%;
+    border-right: $card_explain_grid;
+    background-color: lightpink;
+}
+
+.card_explain_picture{
+    width: $card_width * 2;
+    height: $card_height * 2;
+    padding: 8px ;
+    background-color: lightblue;
+    margin: 20px auto ;
+}
+
+.card_explain_title{
+    width: 80%;
+    height: 30px;
+    border: dimgray 2px solid ;
+    border-right: white 1px solid;
+    border-bottom: white 1px solid;
+    margin: 20px auto;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px;
+    font-family: Microsoft JhengHei;
+}
+
+.card-explain-text{
+    width: 80%;
+    height: 100%;
+    text-align: left;
+    margin: auto auto ;
+    font-family: Microsoft JhengHei;
+    color:black
+    
+}    
+
+.card_player{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.card_player_hp{
+    width: 800px;
+    margin: 20px 50px;
+    height: 40px;
+    background-color: red;
+    line-height: 40px;
+    font-family: Microsoft JhengHei;
+    color: white;
+
+}
+
+.card_board_container{
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+}
+
+.card_board{
+    width: 100%;
+    height: 100%;
+    transform: perspective($perspective_card_board) rotateX($rotateX_card_board);
+    display:flex ;
+    flex-direction: row;
+    flex-wrap: no-wrap;   
+    justify-content: center
+}
+
+.card_board_extra_B{
+    width: $card_grid;
+    height: $card_grid * 5;
+    margin: 0 20px;
+    margin-top: -60px;
+    
+    >*{
+        margin-bottom: 30px;
+        border: $card_board_grid ;
+        
+    }
+}
+
+.card_board_extra_A{
+    width: $card_grid;
+    height: $card_grid * 5;
+    margin: 0 20px;
+    margin-bottom: -60px;
+    display: flex;
+    flex-direction: column-reverse;
+    >*{
+        margin-top: 30px;
+        border: $card_board_grid ;
+        
+    }
+}
+
+
+.card_board_main{
+    width: $card_grid * 5 ;
+    height: $card_grid * 5 ;
+        
+}
+
+.card_board_main_grid_line{
+    width: 100%;
+    height: $card_grid;
+    display:flex ;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+}
+
+.card_board_grid{
+    width: $card_grid;
+    height: $card_grid;
+    border: $card_board_grid;
+}   

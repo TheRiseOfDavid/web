@@ -4,20 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>interface</title>
     <style>
+        body{
+            overflow: hidden;
+        }
+
         html,body,
         .container{
             width: 100%;
             height: 100%;
             margin: 0;
             --card-explain-container-width: 500px;
-            --card-width: calc(59px*2) ;
+            --card-width: calc(59px* 2) ;
             --card-height: calc(86px * 2);
-            --card-grid: calc(128px * 1.2);
+            --card-grid: calc(128px * 1 );
         }
         
-        body{
-            overflow: hidden;
-        }
 
         .container>*{
             float: left;
@@ -31,9 +32,65 @@
             background-color: lightpink;
         }
 
+        .card-explain-picture{
+            width: calc(var(--card-width) * 2);
+            height: calc(var(--card-height) * 2);
+            padding: 8px;
+            background-color: lightblue;
+            margin: 20px auto ;
+        }
+
+
+
+        .card-explain-title{
+            width: 80%;
+            height: 30px;
+            border: dimgray 2px solid ;
+            border-right: white 1px solid;
+            border-bottom: white 1px solid;
+            margin: 20px auto;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 30px;
+            font-family: Microsoft JhengHei;
+        }
+
+        .card-explain-text{
+            width: 80%;
+            height: 100%;
+            text-align: left;
+            margin: auto auto ;
+            font-family: Microsoft JhengHei;
+            color:black
+            
+        }
+
+        .card-player{
+            width: 100%;
+            height: 70px;
+            text-align: center;
+        }
+
+        .card-player>  *{
+            float: left;
+            
+        }
+
+        .card-player-hp{
+            width: 400px;
+            margin: 10px 50px;
+            height: 40px;
+            position: inline-block;
+            background-color: red;
+            line-height: 30px;
+            font-family: Microsoft JhengHei;
+            color: white;
+            
+            box-sizing: border-box;
+        }
+
         .card-board-container{
-            background-image: url("kk.jpg");
-            background-size: cover;
+            background-color: lightgray;
             width: calc(100% - var(--card-explain-container-width));
             height: 100%;
         }
@@ -59,55 +116,15 @@
             box-sizing: border-box;
         }
 
-
-
-        .card-grid{      
+        .card-board-grid{      
             width: var(--card-grid);
             height: var(--card-grid);
 
         }
 
-        .card-grid-split-line{
+        .card-board-grid-split-line{
             width: 100%;
             height: var(--card-grid);
-        }
-
-        .card-picture{
-            width: calc(var(--card-width) * 2);
-            height: calc(var(--card-height) * 2);
-            padding: 8px;
-            background-image: url(tt.jpg);
-            background-size: cover;
-            margin: 20px auto ;
-        }
-
-        .card-explain-grid{
-            width: 500px ;
-            height: 100%;
-            border-top: #000 0.5px solid
-        }
-
-        .card-explain-title{
-            width: 80%;
-            height: 30px;
-            border: dimgray 2px solid ;
-            border-right: white 1px solid;
-            border-bottom: white 1px solid;
-            margin: 20px auto;
-            background-color: lightblue;
-            text-align: center;
-            line-height: 30px;
-            font-family: Microsoft JhengHei;
-        }
-
-        .card-explain-text{
-            width: 80%;
-            height: 100%;
-            text-align: left;
-            margin: auto auto ;
-            font-family: Microsoft JhengHei;
-            color:black
-            
         }
 
 
@@ -117,51 +134,49 @@
 <body >
     <div class="container">
         <div class="card-explain-container">
-            <div class="card-picture"></div>
+            <div class="card-explain-picture"></div>
             <div class="card-explain-grid">
                 <div class="card-explain-title">
-                    何玉婷 - 大衛的女朋友
+                
                 </div>
                 <div class="card-explain-text">
-                    <p>欺負大衛 - 只要大衛想要揉胸，一律不准、摸摸下面或解胸罩也不行。</p>
-                    <p>極其敷衍 - 只要遇到不想回答的問題就「呵呵」。</p>
-                    <p>很愛大衛 - 雖然大衛很幼稚，不像男朋友。但還是很喜歡(我也很愛妳拉)</p>
-                    <p>有凱沒衛 - 有凱凱在旁邊，就不會有大衛。(小孩大於我 QQ)</p>
-                    <p>大衛標記 - 大衛以後會內射婷婷，讓婷婷完全都是大衛的人。</p>
+               
                 </div>
             </div>
         </div> 
-
-        <div class="card-board-container">
-            
         
+        <div class="card-board-container">
+            <div class="card-player">
+                <div class="card-player-hp">8000</div>
+                <div class="card-player-hp">8000</div>
+            </div>
+
             <div class="card-board">
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
 
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
 
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
+                <div class="card-board-grid-split-line"></div>
 
-                <div class="card-grid-split-line"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
 
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
-                <div class="card-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
+                <div class="card-board-grid"></div>
 
             </div>
         </div>
